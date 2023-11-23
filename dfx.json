@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "turbo_backend": {
+      "main": "src/turbo_backend/main.mo",
+      "type": "motoko"
+    },
+    "turbo_frontend": {
+      "dependencies": [
+        "turbo_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/turbo_frontend/src/index.html"
+      },
+      "source": [
+        "src/turbo_frontend/assets",
+        "dist/turbo_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
